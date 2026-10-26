@@ -16,8 +16,13 @@ export default function Footer() {
     <footer className="gutter border-t border-line bg-surface pt-14" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 28px)' }}>
       <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_1fr_auto] md:items-end">
         <div>
-          <Logo size="lg" />
-          <p className="mt-4 max-w-sm text-sm text-muted">{tr.hero.role}</p>
+          <div className="flex items-center gap-5">
+            <Logo size="lg" ring="var(--surface)" />
+            <div className="min-w-0">
+              <p className="font-display text-xl font-extrabold tracking-tight">{tr.hero.name}</p>
+              <p className="mt-1 max-w-sm text-sm text-muted">{tr.hero.role}</p>
+            </div>
+          </div>
         </div>
         <div className="grid gap-2 text-sm">
           <a href={`tel:${contact.phoneIntl}`} className="inline-flex items-center gap-2 font-semibold hover:text-accent"><Phone size={16} className="text-accent" /><span dir="ltr">{contact.phoneDisplay}</span></a>

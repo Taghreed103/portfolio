@@ -14,7 +14,7 @@ function ProjectCard({ p, i, tr, lang }) {
       <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition duration-300 hover:-translate-y-1.5 hover:border-accent/60 hover:shadow-[0_24px_50px_-28px_var(--accent)]">
         <div className="relative overflow-hidden">
           {p.image ? (
-            <img src={`./${p.image}`} alt={title} loading="lazy" className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+            <img src={`./${p.image}`} alt={title} loading="lazy" width="800" height="500" className="aspect-[16/10] w-full bg-surface-2 object-cover object-top transition duration-500 group-hover:scale-105" />
           ) : (
             <div className="transition duration-500 group-hover:scale-105"><Cover title={title} kind={p.kind} tags={p.tags} seed={i} /></div>
           )}

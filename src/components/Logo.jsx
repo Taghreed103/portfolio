@@ -1,4 +1,4 @@
-// Logo: round avatar with a cyan ring and a "T.S" badge, next to "TAGHREED" / "SAID" stacked and centered.
+// Logo: round avatar with a cyan ring, next to "TAGHREED" / "SAID" stacked and centered.
 export default function Logo({ size = 'md' }) {
   const big = size === 'lg'
   const av = big ? 'size-16' : 'size-10'
@@ -12,11 +12,6 @@ export default function Logo({ size = 'md' }) {
           height="128"
           className={`${av} rounded-full object-cover ring-2 ring-accent ring-offset-2 ring-offset-bg`}
         />
-        <span
-          className={`font-logo absolute -bottom-1 -right-2 rounded-full border-2 border-bg bg-accent font-extrabold leading-none text-on-accent ${big ? 'px-2 py-1 text-[11px]' : 'px-1.5 py-[3px] text-[8px]'}`}
-        >
-          T.S
-        </span>
       </span>
       <span className="inline-flex flex-col items-start leading-none">
         <span className={`font-logo font-bold uppercase tracking-tight ${big ? 'text-2xl' : 'text-[15px]'}`}>Taghreed</span>

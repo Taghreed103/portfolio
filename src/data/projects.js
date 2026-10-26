@@ -49,29 +49,6 @@ export const githubProjects = [
     image: 'projects/social.webp',
   },
   {
-    title: { en: 'Parking Reservation System', ar: 'نظام حجز المواقف' },
-    desc: {
-      en: 'Backend for a parking reservation system built for WeLink Cargo, with Express REST APIs and live updates over WebSocket.',
-      ar: 'باك إند لنظام حجز مواقف السيارات لشركة WeLink Cargo، بواجهات Express وتحديثات لحظية عبر WebSocket.',
-    },
-    tags: ['TypeScript', 'Express', 'WebSocket'],
-    repo: GH + 'parking-system',
-    live: null,
-    image: null,
-    kind: 'web',
-  },
-  {
-    title: { en: 'ALFY Photography Landing', ar: 'صفحة ALFY للتصوير' },
-    desc: {
-      en: 'An image-forward landing page for a photographer, built with accessibility and performance first.',
-      ar: 'صفحة هبوط لمصور فوتوغرافي تعتمد على الصور، مبنية مع مراعاة سهولة الوصول والأداء.',
-    },
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    repo: GH + 'app1',
-    live: PAGES + 'app1/',
-    image: 'projects/app1.webp',
-  },
-  {
     title: { en: 'FruityShop', ar: 'متجر FruityShop' },
     desc: {
       en: 'A grocery store landing page for fresh organic products, with features, products, categories and reviews sections.',

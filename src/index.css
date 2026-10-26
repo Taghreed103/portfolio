@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* Layout: one-page portfolio — About hero (photo + orbiting cards), course marquee, project grids, contact.
+   Palette: cool white + cyan (light), deep teal-navy + cyan (dark). */
+:root {
+  --bg: #f6fbfc;
+  --surface: #ffffff;
+  --surface-2: #e8f6f9;
+  --fg: #06222b;
+  --muted: #4b6872;
+  --line: #d2e8ee;
+  --accent: #0891b2;
+  --accent-2: #22d3ee;
+  --on-accent: #ffffff;
+  --glow: rgb(34 211 238 / 0.28);
+  --grid: rgb(8 145 178 / 0.07);
+  --font-display: "Unbounded", "Alexandria", system-ui, sans-serif;
+  --font-body: "Manrope", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #041219; --surface: #08202a; --surface-2: #0b2a35; --fg: #eafaff; --muted: #8fb2bc;
+    --line: #15384a; --accent: #22d3ee; --accent-2: #67e8f9; --on-accent: #022c36;
+    --glow: rgb(34 211 238 / 0.22); --grid: rgb(103 232 249 / 0.06); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #041219; --surface: #08202a; --surface-2: #0b2a35; --fg: #eafaff; --muted: #8fb2bc;
+  --line: #15384a; --accent: #22d3ee; --accent-2: #67e8f9; --on-accent: #022c36;
+  --glow: rgb(34 211 238 / 0.22); --grid: rgb(103 232 249 / 0.06); color-scheme: dark;
+}
+:root[lang="ar"] {
+  --font-display: "Alexandria", "Unbounded", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", "Manrope", system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-on-accent: var(--on-accent);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  transition: background-color .4s ease, color .4s ease;
+}
+h1, h2, h3 { text-wrap: balance; font-family: var(--font-display); line-height: 1.12; }
+::selection { background: var(--accent-2); color: #022c36; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+
+.font-logo { font-family: "Unbounded", "Arial Black", "Helvetica Neue", system-ui, sans-serif; }
+.gutter {
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+/* background blueprint grid */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ---------- AI portrait ---------- */
+.portrait-ring {
+  background: conic-gradient(from 0deg, transparent 0 20%, var(--accent-2) 30%, transparent 42%, transparent 62%, var(--accent) 74%, transparent 86%);
+  animation: spin 9s linear infinite;
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+          mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+}
+.portrait-ring-dash {
+  border: 1.5px dashed color-mix(in oklab, var(--accent) 45%, transparent);
+  animation: spin 40s linear infinite reverse;
+}
+.portrait-scan {
+  background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--accent-2) 55%, transparent) 50%, transparent);
+  height: 18%;
+  animation: scan 4.2s cubic-bezier(.6,0,.4,1) infinite;
+  mix-blend-mode: screen;
+}
+.portrait-lines {
+  background: repeating-linear-gradient(0deg, transparent 0 3px, rgb(34 211 238 / .07) 3px 4px);
+}
+.portrait-halo { background: radial-gradient(closest-side, var(--glow), transparent 70%); animation: breathe 5s ease-in-out infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes scan { 0% { top: -20%; opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } 100% { top: 100%; opacity: 0 } }
+@keyframes breathe { 0%,100% { transform: scale(1); opacity: .9 } 50% { transform: scale(1.06); opacity: 1 } }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+@keyframes blink { 50% { opacity: .2 } }
+.float-a { animation: float 6s ease-in-out infinite; }
+.float-b { animation: float 7s ease-in-out -2s infinite; }
+.float-c { animation: float 6.5s ease-in-out -4s infinite; }
+.blink { animation: blink 1.4s steps(2) infinite; }
+
+/* ---------- Marquee ---------- */
+.marquee {
+  -webkit-mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.marquee-track { animation: marquee 28s linear infinite; width: max-content; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.logo-mono { filter: brightness(0); opacity: .62; transition: opacity .3s; }
+:root[data-theme="dark"] .logo-mono { filter: brightness(0) invert(1); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-mono { filter: brightness(0) invert(1); } }
+.marquee-item:hover .logo-mono { opacity: 1; }
+
+/* ---------- Cards ---------- */
+.card-cover { background: radial-gradient(120% 90% at 0% 0%, color-mix(in oklab, var(--accent-2) 40%, var(--surface-2)), var(--surface-2) 60%); }
+.glass {
+  background: color-mix(in oklab, var(--surface) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .marquee-track { animation: none; }
+}

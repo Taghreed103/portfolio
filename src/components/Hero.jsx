@@ -73,7 +73,7 @@ function Portrait({ cards, rtl }) {
       </motion.span>
 
       {/* Floating cards pop out of the portrait (md and up) */}
-      <div className="absolute inset-0 hidden md:block">
+      <div className="absolute inset-0 hidden lg:block">
         {cards.map((c, i) => {
           const s = spots[c.key]
           const fx = rtl ? -s.from.x : s.from.x
@@ -102,7 +102,7 @@ export default function Hero() {
   return (
     <section id="about" className="relative overflow-hidden gutter pb-16 pt-28 md:pb-24 md:pt-36">
       <div className="bg-grid pointer-events-none absolute inset-0 [mask-image:radial-gradient(70%_60%_at_50%_30%,#000,transparent)]" aria-hidden="true" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.05fr_1fr] md:gap-10">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.05fr_1fr] lg:gap-10">
         <div className="min-w-0">
           <motion.span {...up(0)} className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-bold text-muted">
             <span className="relative flex size-2">
@@ -137,10 +137,10 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="min-w-0 px-6 md:px-10">
+        <div className="mx-auto w-full min-w-0 max-w-xl px-6 lg:px-10">
           <Portrait cards={tr.cards} rtl={lang === 'ar'} />
           {/* Mobile: cards in a grid under the portrait */}
-          <div className="mt-12 grid grid-cols-2 gap-3 md:hidden">
+          <div className="mt-12 grid grid-cols-2 gap-3 lg:hidden">
             {tr.cards.map((c, i) => (
               <motion.div key={c.key} initial={{ opacity: 0, y: -30, scale: 0.8 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.5 + i * 0.1, type: 'spring', stiffness: 160, damping: 18 }}>
                 <FeatureCard card={c} className="max-w-none h-full flex-col" />

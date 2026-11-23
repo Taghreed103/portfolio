@@ -49,10 +49,10 @@ function Portrait({ cards, rtl }) {
           srcSet="./img/taghreed-440.webp 440w, ./img/taghreed-720.webp 720w"
           sizes="(max-width: 768px) 80vw, 440px"
           width="720"
-          height="707"
+          height="821"
           alt="Taghreed Said"
           fetchPriority="high"
-          className="absolute inset-x-0 bottom-0 mx-auto w-[92%] select-none"
+          className="absolute inset-x-0 bottom-0 mx-auto w-[84%] select-none"
           draggable="false"
         />
         <div className="portrait-lines pointer-events-none absolute inset-0" aria-hidden="true" />

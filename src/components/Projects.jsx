@@ -47,7 +47,7 @@ function ProjectCard({ p, i, tr, lang }) {
 export default function Projects() {
   const { tr, lang } = usePrefs()
   return (
-    <section id="projects" className="gutter py-20 md:py-28">
+    <section id="code" className="gutter py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <SectionHead
           eyebrow={tr.projects.eyebrow}

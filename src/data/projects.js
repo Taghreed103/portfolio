@@ -16,17 +16,6 @@ export const githubProjects = [
     image: 'projects/ecommerce.webp',
   },
   {
-    title: { en: 'YourUni Registration System', ar: 'نظام تسجيل YourUni' },
-    desc: {
-      en: 'Student registration platform for Malaysian universities with role-based access, document management and task tracking.',
-      ar: 'منصة لتسجيل الطلاب في جامعات ماليزيا بصلاحيات حسب الدور، وإدارة للمستندات، ومتابعة للمهام.',
-    },
-    tags: ['React', 'TypeScript', 'JWT'],
-    repo: GH + 'yourni',
-    live: PAGES + 'yourni/',
-    image: 'projects/yourni.webp',
-  },
-  {
     title: { en: 'Online Book Store', ar: 'متجر الكتب أونلاين' },
     desc: {
       en: 'A book store where readers browse, search and order titles through a clean, easy interface.',
@@ -36,17 +25,6 @@ export const githubProjects = [
     repo: GH + 'book-store',
     live: 'https://book-store-theta-ruby.vercel.app',
     image: 'projects/book-store.webp',
-  },
-  {
-    title: { en: 'Social App', ar: 'تطبيق تواصل اجتماعي' },
-    desc: {
-      en: 'A Facebook-style social network in React and Tailwind using React Query, global state and custom hooks, with dark mode.',
-      ar: 'شبكة تواصل على طريقة فيسبوك بـ React وTailwind، تستخدم React Query وإدارة الحالة العامة والـ hooks، مع وضع داكن.',
-    },
-    tags: ['React', 'React Query', 'Tailwind'],
-    repo: GH + 'SocialApp',
-    live: PAGES + 'SocialApp/',
-    image: 'projects/social.webp',
   },
   {
     title: { en: 'FruityShop', ar: 'متجر FruityShop' },
@@ -60,17 +38,6 @@ export const githubProjects = [
     image: 'projects/fruity.webp',
   },
   {
-    title: { en: 'Bookmarker', ar: 'مدير الروابط Bookmarker' },
-    desc: {
-      en: 'A bookmark manager to save, visit and delete favorite sites, with URL validation and local storage.',
-      ar: 'تطبيق لحفظ المواقع المفضلة وزيارتها وحذفها، مع التحقق من صحة الروابط والحفظ في المتصفح.',
-    },
-    tags: ['JavaScript', 'CRUD', 'Validation'],
-    repo: GH + 'BookMark-CRUDS',
-    live: PAGES + 'BookMark-CRUDS/',
-    image: 'projects/bookmark.webp',
-  },
-  {
     title: { en: 'Start Framework (React)', ar: 'Start Framework بـ React' },
     desc: {
       en: 'A multi-page React site practicing hooks, props, state management and routing between pages.',
@@ -81,21 +48,43 @@ export const githubProjects = [
     live: PAGES + 'ReactApp1/',
     image: 'projects/reactapp1.webp',
   },
+  {
+    title: { en: 'Social App', ar: 'تطبيق تواصل اجتماعي' },
+    desc: {
+      en: 'A Facebook-style social network in React and Tailwind using React Query, global state and custom hooks, with dark mode.',
+      ar: 'شبكة تواصل على طريقة فيسبوك بـ React وTailwind، تستخدم React Query وإدارة الحالة العامة والـ hooks، مع وضع داكن.',
+    },
+    tags: ['React', 'React Query', 'Tailwind'],
+    repo: GH + 'SocialApp',
+    live: PAGES + 'SocialApp/',
+    image: 'projects/social.webp',
+  },
 ]
 
-// Behance case studies.
+// Behance case studies, in display order. Covers are the project covers from Behance.
+const BE_COVER = 'https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/'
+
 export const behanceProjects = [
   {
-    title: { en: 'InstaPay Website Redesign', ar: 'إعادة تصميم موقع InstaPay' },
+    title: { en: 'Saydaliyati Medical App', ar: 'تطبيق صيدليتي الطبي' },
     desc: {
-      en: 'A conceptual redesign of the InstaPay website: better user experience, a modern visual interface and a cleaner, more accessible design that keeps the brand identity.',
-      ar: 'إعادة تصميم مفاهيمية لموقع InstaPay: تجربة استخدام أفضل، وواجهة عصرية، وتصميم أنظف وأسهل في الوصول مع الحفاظ على هوية البراند.',
+      en: 'Saydality, an Arabic-first pharmacy app that reminds users of their medicine schedule. A full UI/UX case study designed in Figma over 6 weeks.',
+      ar: 'صيدليتي، تطبيق صيدلية عربي يذكّر المستخدم بمواعيد أدويته. دراسة حالة UI/UX كاملة صُممت على Figma خلال 6 أسابيع.',
     },
-    tags: ['Web', 'Fintech', 'Redesign'],
-    url: 'https://www.behance.net/gallery/252112823/InstaPay-Website-Redesign',
-    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/6e2ebe252112823.6ac81d58e6fd8.png',
-    fallback: 'projects/behance-instapay.webp',
-    kind: 'web',
+    tags: ['Mobile', 'Health', 'Arabic UI'],
+    url: 'https://www.behance.net/gallery/253656695/-Medical-app',
+    image: BE_COVER + '57f95c253656695.Y3JvcCwzNDI4LDI2ODIsNDQxLDA.png',
+    fallback: 'projects/behance-saydality.webp',
+  },
+  {
+    title: { en: "Mo'na Grocery Delivery App", ar: 'مؤنة لتوصيل البقالة' },
+    desc: {
+      en: 'A full UX/UI case study for a grocery delivery ecosystem: mobile app, website and dashboard, from user interviews and competitor analysis to a 336-component design system.',
+      ar: 'دراسة حالة UX/UI كاملة لمنظومة توصيل بقالة: تطبيق موبايل وموقع وداشبورد، من مقابلات المستخدمين وتحليل المنافسين لحد Design System من 336 كومبوننت.',
+    },
+    tags: ['Mobile', 'Web', 'Dashboard'],
+    url: 'https://www.behance.net/gallery/258864421/-Mona-Grocery-Delivery-App-UXUI-Case-Study',
+    image: BE_COVER + '1c8a95258864421.Y3JvcCw0ODQ4LDM3OTIsMCww.png',
   },
   {
     title: { en: 'Glowee Beauty Booking', ar: 'Glowee لحجز مراكز التجميل' },
@@ -105,20 +94,28 @@ export const behanceProjects = [
     },
     tags: ['Web', 'Booking', 'Beauty'],
     url: 'https://www.behance.net/gallery/255928433/Beauty-Center-GloweeBooking',
-    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/6dcfcf255928433.6ab9dd3435120.png',
+    image: BE_COVER + '570a60255928433.Y3JvcCw0ODQ4LDM3OTIsMCww.png',
     fallback: 'projects/behance-glowee.webp',
-    kind: 'mobile',
   },
   {
-    title: { en: 'Saydaliyati Medical App', ar: 'تطبيق صيدليتي الطبي' },
+    title: { en: 'InstaPay Website Redesign', ar: 'إعادة تصميم موقع InstaPay' },
     desc: {
-      en: 'Saydality, an Arabic-first pharmacy app that reminds users of their medicine schedule. A full UI/UX case study designed in Figma over 6 weeks.',
-      ar: 'صيدليتي، تطبيق صيدلية عربي يذكّر المستخدم بمواعيد أدويته. دراسة حالة UI/UX كاملة صُممت على Figma خلال 6 أسابيع.',
+      en: 'A conceptual redesign of the InstaPay website: better user experience, a modern visual interface and a cleaner, more accessible design that keeps the brand identity.',
+      ar: 'إعادة تصميم مفاهيمية لموقع InstaPay: تجربة استخدام أفضل، وواجهة عصرية، وتصميم أنظف وأسهل في الوصول مع الحفاظ على هوية البراند.',
     },
-    tags: ['Mobile', 'Health', 'Arabic UI'],
-    url: 'https://www.behance.net/gallery/253656695/-Medical-app',
-    image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/c09c27253656695.6a6ef482118be.png',
-    fallback: 'projects/behance-saydality.webp',
-    kind: 'mobile',
+    tags: ['Web', 'Fintech', 'Redesign'],
+    url: 'https://www.behance.net/gallery/252112823/InstaPay-Website-Redesign',
+    image: BE_COVER + '9a5ab5252112823.Y3JvcCwzMzI5LDI2MDQsMzYyLDA.png',
+    fallback: 'projects/behance-instapay.webp',
+  },
+  {
+    title: { en: 'Kyan Design System', ar: 'نظام التصميم كيان' },
+    desc: {
+      en: "A bilingual Arabic/English design system built in Figma for Mo'na: 336 components, 1,922 RTL and LTR variants, 308 variables, light/dark and 3 brand modes.",
+      ar: 'نظام تصميم ثنائي اللغة (عربي/إنجليزي) على Figma لتطبيق مؤنة: 336 كومبوننت، و1,922 فاريانت RTL وLTR، و308 متغير، مع وضع فاتح وداكن و3 أوضاع للبراند.',
+    },
+    tags: ['Design System', 'Figma', 'RTL/LTR'],
+    url: 'https://www.behance.net/gallery/258566247/Kyan-Design-System-Bilingual-UI-Case-Study',
+    image: BE_COVER + 'e25d1d258566247.Y3JvcCw0MTQyLDMyNDAsMCww.png',
   },
 ]

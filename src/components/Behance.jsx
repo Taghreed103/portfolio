@@ -9,7 +9,7 @@ import Cover from './Cover'
 export default function Behance() {
   const { tr, lang } = usePrefs()
   return (
-    <section className="gutter bg-surface-2/50 py-20 md:py-28" aria-labelledby="behance-title">
+    <section id="projects" className="gutter bg-surface-2/50 py-20 md:py-28" aria-labelledby="behance-title">
       <div className="mx-auto max-w-6xl">
         <SectionHead
           eyebrow={tr.behance.eyebrow}
@@ -29,13 +29,13 @@ export default function Behance() {
                   {p.image ? (
                     <img
                       src={p.image.startsWith('http') ? p.image : `./${p.image}`}
-                      onError={(e) => { if (p.fallback && !e.currentTarget.dataset.fb) { e.currentTarget.dataset.fb = '1'; e.currentTarget.src = `./${p.fallback}` } }}
+                      onError={(e) => { if (p.fallback && !e.currentTarget.dataset.fb) { e.currentTarget.dataset.fb = '1'; e.currentTarget.src = `./${p.fallback}` } else if (!p.fallback) { e.currentTarget.style.visibility = 'hidden' } }}
                       referrerPolicy="no-referrer"
                       alt={p.title[lang]}
                       loading="lazy"
-                      width="800"
-                      height="500"
-                      className="aspect-[16/10] w-full bg-surface-2 object-cover object-top transition duration-500 group-hover:scale-105"
+                      width="808"
+                      height="632"
+                      className="aspect-[808/632] w-full bg-surface-2 object-cover transition duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <div className="transition duration-500 group-hover:scale-105"><Cover title={p.title.en} kind={p.kind} tags={p.tags} seed={i + 2} /></div>

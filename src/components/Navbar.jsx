@@ -17,6 +17,7 @@ export default function Navbar() {
   const links = [
     ['about', tr.nav.about],
     ['projects', tr.nav.projects],
+    ['services', tr.nav.services],
     ['contact', tr.nav.contact],
   ]
   const iconBtn = 'grid size-10 place-items-center rounded-full border border-line bg-surface/60 text-fg transition hover:border-accent hover:text-accent'

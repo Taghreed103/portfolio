@@ -7,6 +7,8 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/taghreed-s-232a491b2',
   behance: 'https://www.behance.net/taghreedSaid',
   github: 'https://github.com/Taghreed103',
+  // Monsters Gate mentorship profile. Leave empty to show the card without a link.
+  mentorship: '',
 }
 
 // Web3Forms access key — public by design, it only routes form messages to the inbox above.
@@ -14,7 +16,7 @@ export const WEB3FORMS_KEY = '7b4da2fe-09f3-4115-a865-129b6fed7783'
 
 export const t = {
   en: {
-    nav: { about: 'About', projects: 'Projects', contact: 'Contact' },
+    nav: { about: 'About', projects: 'Projects', services: 'Services', contact: 'Contact' },
     langLabel: 'العربية',
     langAria: 'Switch to Arabic',
     themeAria: (dark) => (dark ? 'Switch to light mode' : 'Switch to dark mode'),
@@ -51,6 +53,12 @@ export const t = {
       open: 'Open on Behance',
       all: 'See full Behance profile',
     },
+    services: {
+      eyebrow: 'Services',
+      title: 'How I can help your product',
+      sub: 'From the first research question to a live, production-ready website.',
+      book: 'Book a session on Monsters Gate',
+    },
     contact: {
       eyebrow: 'Contact',
       title: "Let's build something people love to use.",
@@ -77,7 +85,7 @@ export const t = {
     footer: { rights: 'All rights reserved.', made: 'Designed & built by Taghreed Said', top: 'Back to top' },
   },
   ar: {
-    nav: { about: 'نبذة عني', projects: 'المشاريع', contact: 'تواصل معي' },
+    nav: { about: 'نبذة عني', projects: 'المشاريع', services: 'الخدمات', contact: 'تواصل معي' },
     langLabel: 'English',
     langAria: 'التبديل إلى الإنجليزية',
     themeAria: (dark) => (dark ? 'التبديل إلى الوضع الفاتح' : 'التبديل إلى الوضع الداكن'),
@@ -113,6 +121,12 @@ export const t = {
       sub: 'دراسات حالة UI/UX: البحث، رحلات المستخدم والواجهات النهائية.',
       open: 'افتح على Behance',
       all: 'شاهد حسابي كاملًا على Behance',
+    },
+    services: {
+      eyebrow: 'الخدمات',
+      title: 'إزاي أقدر أساعد منتجك',
+      sub: 'من أول سؤال في البحث لحد موقع لايف جاهز للاستخدام.',
+      book: 'احجز جلسة على Monsters Gate',
     },
     contact: {
       eyebrow: 'تواصل',

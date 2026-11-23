@@ -8,7 +8,7 @@ export const contact = {
   behance: 'https://www.behance.net/taghreedSaid',
   github: 'https://github.com/Taghreed103',
   // Monsters Gate mentorship profile. Leave empty to show the card without a link.
-  mentorship: '',
+  mentorship: 'https://monstersgate.com/ar/mentorship/taghreed-saed-w5GqnB',
 }
 
 // Web3Forms access key — public by design, it only routes form messages to the inbox above.
@@ -57,7 +57,8 @@ export const t = {
       eyebrow: 'Services',
       title: 'How I can help your product',
       sub: 'From the first research question to a live, production-ready website.',
-      book: 'Book a session on Monsters Gate',
+      book: 'Book on Monsters Gate',
+      thumbAlt: 'Taghreed Said mentor profile on Monsters Gate, free sessions',
     },
     contact: {
       eyebrow: 'Contact',
@@ -126,7 +127,8 @@ export const t = {
       eyebrow: 'الخدمات',
       title: 'إزاي أقدر أساعد منتجك',
       sub: 'من أول سؤال في البحث لحد موقع لايف جاهز للاستخدام.',
-      book: 'احجز جلسة على Monsters Gate',
+      book: 'احجز على Monsters Gate',
+      thumbAlt: 'صفحة تغريد سعيد كمرشدة على Monsters Gate، جلسات مجانية',
     },
     contact: {
       eyebrow: 'تواصل',

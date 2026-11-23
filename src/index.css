@@ -132,6 +132,13 @@ h1, h2, h3 { text-wrap: balance; font-family: var(--font-display); line-height: 
 }
 
 /* ---------- Service cards ---------- */
+.svc-featured { box-shadow: 0 0 0 1px color-mix(in oklab, var(--accent) 35%, transparent), 0 24px 60px -30px var(--accent); }
+.svc-featured::after {
+  content: ""; position: absolute; inset: -40%; pointer-events: none; z-index: 0;
+  background: conic-gradient(from 0deg, transparent 0 80%, color-mix(in oklab, var(--accent-2) 22%, transparent) 90%, transparent 100%);
+  animation: spin 6s linear infinite; opacity: .55;
+}
+.svc-featured > * { z-index: 1; }
 .svc-card {
   --rx: 0deg; --ry: 0deg; --mx: 50%; --my: 0%;
   transform: rotateX(var(--rx)) rotateY(var(--ry));

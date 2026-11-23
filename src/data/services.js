@@ -4,6 +4,15 @@ import { contact } from './content'
 
 export const services = [
   {
+    key: 'frontend',
+    title: { en: 'Front-End Development', ar: 'تطوير الواجهات الأمامية' },
+    text: {
+      en: 'Turning designs into fast, responsive, accessible websites with clean code, deployed live on Vercel.',
+      ar: 'تحويل التصميم لمواقع سريعة ومتجاوبة وسهلة الاستخدام بكود نضيف، ومنشورة لايف على Vercel.',
+    },
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+  },
+  {
     key: 'ds',
     title: { en: 'Design Systems', ar: 'أنظمة التصميم' },
     text: {
@@ -18,6 +27,17 @@ export const services = [
       en: 'iOS and Android experiences designed for real hands and real days, from user flows to pixel-perfect screens and prototypes.',
       ar: 'تجارب iOS وAndroid مصممة للاستخدام الحقيقي، من رحلة المستخدم لحد شاشات دقيقة وبروتوتايب جاهز.',
     },
+  },
+  {
+    key: 'mentor',
+    title: { en: 'Mentorship & Training', ar: 'إرشاد وتدريب' },
+    text: {
+      en: 'One-to-one sessions on UI/UX and front-end: portfolio reviews, career guidance and hands-on learning.',
+      ar: 'جلسات فردية في UI/UX والفرونت إند: مراجعة البورتفوليو، وتوجيه مهني، وتعلم عملي.',
+    },
+    badge: { en: 'Free for now', ar: 'مجانًا حاليًا' },
+    href: contact.mentorship,
+    thumb: 'img/monstersgate-card.webp',
   },
   {
     key: 'web',
@@ -44,15 +64,6 @@ export const services = [
     },
   },
   {
-    key: 'frontend',
-    title: { en: 'Front-End Development', ar: 'تطوير الواجهات الأمامية' },
-    text: {
-      en: 'Turning designs into fast, responsive, accessible websites with clean code, deployed live on Vercel.',
-      ar: 'تحويل التصميم لمواقع سريعة ومتجاوبة وسهلة الاستخدام بكود نضيف، ومنشورة لايف على Vercel.',
-    },
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
-  },
-  {
     key: 'ai',
     title: { en: 'Claude & MCP', ar: 'Claude و MCP' },
     text: {
@@ -60,15 +71,5 @@ export const services = [
       ar: 'استشارات في استخدام الذكاء الاصطناعي: إزاي تستخدم Claude وموصّلات MCP مع Figma وGitHub وأدواتك عشان تصمم وتنفذ أسرع.',
     },
     badge: { en: 'AI consultations', ar: 'استشارات AI' },
-  },
-  {
-    key: 'mentor',
-    title: { en: 'Mentorship & Training', ar: 'إرشاد وتدريب' },
-    text: {
-      en: 'One-to-one sessions on UI/UX and front-end: portfolio reviews, career guidance and hands-on learning.',
-      ar: 'جلسات فردية في UI/UX والفرونت إند: مراجعة البورتفوليو، وتوجيه مهني، وتعلم عملي.',
-    },
-    badge: { en: 'Free for now', ar: 'مجانًا حاليًا' },
-    href: contact.mentorship,
   },
 ]

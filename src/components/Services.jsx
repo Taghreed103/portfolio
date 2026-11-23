@@ -49,7 +49,7 @@ function ServiceCard({ s, i, lang, tr }) {
         onPointerMove={onMove}
         onPointerLeave={onLeave}
         {...(isLink ? { href: s.href, target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className={`svc-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface p-6 ${isLink ? 'cursor-pointer' : ''}`}
+        className={`svc-card group relative flex h-full flex-col overflow-hidden rounded-3xl border bg-surface p-6 ${s.thumb ? 'svc-featured border-accent/60' : 'border-line'} ${isLink ? 'cursor-pointer' : ''}`}
       >
         <span className="svc-spot pointer-events-none absolute inset-0" aria-hidden="true" />
         <div className="relative flex items-start justify-between gap-3">
@@ -58,6 +58,19 @@ function ServiceCard({ s, i, lang, tr }) {
           </span>
           <span dir="ltr" className="font-logo text-[11px] tracking-[0.25em] text-muted">( {String(i + 1).padStart(2, '0')} )</span>
         </div>
+        {s.thumb && (
+          <div className="relative mt-4">
+            <img
+              src={`./${s.thumb}`}
+              alt={tr.services.thumbAlt}
+              width="640"
+              height="409"
+              loading="lazy"
+              className="svc-thumb w-full rounded-2xl border border-line bg-white shadow-[0_18px_40px_-22px_var(--accent)] transition duration-500 group-hover:-translate-y-1 group-hover:scale-[1.03]"
+            />
+            <span dir="ltr" className="absolute -top-2.5 end-3 rounded-full bg-[#4338ca] px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-md">Monsters Gate</span>
+          </div>
+        )}
         <h3 className="relative mt-5 text-lg font-bold leading-snug tracking-tight">{s.title[lang]}</h3>
         {s.badge && (
           <span className="relative mt-2 inline-flex w-fit items-center gap-1.5 rounded-full border border-accent/40 bg-accent/10 px-2.5 py-0.5 text-[11px] font-bold text-accent">
@@ -79,9 +92,11 @@ function ServiceCard({ s, i, lang, tr }) {
           </ul>
         )}
         {isLink && (
-          <span className="relative mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-bold text-accent">
-            {tr.services.book}
-            <ArrowUpRight size={16} className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+          <span className="relative mt-auto pt-5">
+            <span className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-accent px-4 py-2.5 text-sm font-bold text-on-accent transition group-hover:brightness-110">
+              {tr.services.book}
+              <ArrowUpRight size={16} className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100" />
+            </span>
           </span>
         )}
         <span className="svc-bar absolute bottom-0 h-[3px] rounded-full" aria-hidden="true" />

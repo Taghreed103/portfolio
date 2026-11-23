@@ -6,7 +6,7 @@ export default function Logo({ size = 'md' }) {
     <span dir="ltr" className="inline-flex select-none items-center gap-3" aria-label="Taghreed Said">
       <span className="relative shrink-0">
         <img
-          src="./img/avatar.webp"
+          src="./img/avatar-v2.webp"
           alt=""
           width="128"
           height="128"

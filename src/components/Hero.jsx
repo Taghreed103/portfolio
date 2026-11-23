@@ -45,8 +45,8 @@ function Portrait({ cards, rtl }) {
         style={{ background: 'radial-gradient(circle at 50% 35%, color-mix(in oklab, var(--accent-2) 30%, var(--surface-2)), var(--surface-2) 70%)' }}
       >
         <img
-          src="./img/taghreed-720.webp"
-          srcSet="./img/taghreed-440.webp 440w, ./img/taghreed-720.webp 720w"
+          src="./img/taghreed-720-v2.webp"
+          srcSet="./img/taghreed-440-v2.webp 440w, ./img/taghreed-720-v2.webp 720w"
           sizes="(max-width: 768px) 80vw, 440px"
           width="720"
           height="821"
